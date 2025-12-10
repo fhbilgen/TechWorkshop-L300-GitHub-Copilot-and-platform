@@ -41,7 +41,7 @@ jobs:
     
     - name: Build image in ACR
       run: |
-        az acr build --registry ${{ env.ACR_NAME }} --image ${{ env.IMAGE_NAME }}:latest --file src/Dockerfile
+        az acr build --registry ${{ env.ACR_NAME }} --image ${{ env.IMAGE_NAME }}:latest --file src/Dockerfile src/
         # az acr build \
         #   --registry ${{ env.ACR_NAME }} \
         #   # --image ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} \
