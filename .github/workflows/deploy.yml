@@ -1,12 +1,21 @@
 name: Build and Deploy to Azure App Service
 
-on: 
+# on: 
+#   push:
+#     branches: [ main ]
+#     paths: [ 'src/**' ]
+#   pull_request:
+#     branches: [ '*' ]
+#   workflow_dispatch: 
+
+on:
   push:
-    branches: [ main ]
-    paths: [ 'src/**' ]
+   branches: [ dev ]
+   
   pull_request:
-    branches: [ '*' ]
-  workflow_dispatch: 
+   branches: [ dev ]
+   
+  workflow_dispatch:
 
 
 env:
