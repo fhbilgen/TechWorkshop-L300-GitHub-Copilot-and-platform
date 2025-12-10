@@ -1,0 +1,56 @@
+# .dockerignore file for ZavaStorefront
+# Exclude files and folders that shouldn't be copied to Docker image
+
+# Build artifacts
+bin/
+obj/
+out/
+publish/
+
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+
+
+# Documentation
+*.md
+LICENSE
+README.md
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Azure
+.azure/
+azure.yaml
+
+# Environment files
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Other
+node_modules/
+*.cache
+.DS_Store
+Thumbs.db
