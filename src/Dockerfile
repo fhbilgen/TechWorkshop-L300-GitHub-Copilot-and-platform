@@ -1,8 +1,8 @@
-# Dockerfile for ZavaStorefront .NET 6.0 application
+# Dockerfile for ZavaStorefront .NET 8.0 application
 # Multi-stage build for optimized container image
 
 # Build stage
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy csproj and restore dependencies
@@ -23,7 +23,7 @@ RUN dotnet publish "ZavaStorefront.csproj" -c Release -o /app/publish /p:UseAppH
 
 # Just for clarity, separate runtime stage
 # Runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 
 # Create non-root user for security
